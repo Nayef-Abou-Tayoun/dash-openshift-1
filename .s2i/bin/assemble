@@ -4,7 +4,8 @@ set -eo pipefail
 
 pip install -r /tmp/src/requirements.txt
 
-mv /tmp/src/wsgi.py /opt/app-root/wsgi.py
+mv /tmp/src/wsgi.py /opt/app-root/src/wsgi.py
+rm -f /tmp/src/*
 
 # Ensure passwd/group file intercept happens for any shell environment.
 
