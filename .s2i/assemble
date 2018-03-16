@@ -1,0 +1,7 @@
+#!/bin/bash
+
+set -eo pipefail
+
+rm -rf /tmp/src/.git
+
+/usr/libexec/s2i/assemble

@@ -28,15 +28,16 @@ items:
       git:
         uri: https://github.com/vpavlin/dash-openshift.git
         ref: master
-      strategy:
-        type: Source
-        sourceStrategy:
-          from: ImageStreamTag
+    strategy:
+      type: Source
+      sourceStrategy:
+        from:
+          kind: DockerImage
           name: centos/python-36-centos7:latest
-      output:
-        to:
-          kind: ImageStreamTag
-          name: s2i-dash-base:latest
-      resources:
-        limist:
-          memory: 512Mi
+    output:
+      to:
+        kind: ImageStreamTag
+        name: s2i-dash-base:latest
+    resources:
+      limist:
+        memory: 512Mi
