@@ -33,7 +33,7 @@ items:
       sourceStrategy:
         from:
           kind: DockerImage
-          name: centos/python-36-centos7:latest
+          name: quay.io/vpavlin/python-36-centos7-dash:latest
     output:
       to:
         kind: ImageStreamTag
